@@ -1,0 +1,21 @@
+def swap_first_two_digits(N):
+    #return N after swapping first two digits
+    count=0
+    count2=0
+    M=N
+    O=N
+    while N:
+        x=N%10
+        N=N//10
+        count+=1
+    y=count-1
+    while M:
+        a=M%10
+        M=M//10
+        count2+=1
+        if count2==y:
+            break
+    digits=O-(x*(10**y))
+    digits=digits-(a*(10**(y-1)))
+    N=(a*(10**y))+(x*(10**(y-1)))+digits
+    return N
